@@ -1,15 +1,21 @@
 import React, {Component} from 'react';
+import ProdBox from './ProductBox'
 
 export default class Products extends Component{
 
 
     render(){
-        const {value} = this.props
-        console.log(value)
+        const {data} = this.props
+        console.log(data)
         return(
-            <div>
-                <h1>{value}</h1>
-            </div>
+        <div>
+            {data.map((elem) => {
+                return(
+                    <ProdBox elem={elem} />
+                    ) 
+                    
+            })}
+        </div>
         )
     }
     

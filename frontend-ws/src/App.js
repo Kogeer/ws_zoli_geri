@@ -52,7 +52,7 @@ constructor(props){
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/products">
-            <Products value={this.state.data}/>
+            <Products data={this.state.data}/>
           </Route>
           <Route path="/orders">
             <Orders />
