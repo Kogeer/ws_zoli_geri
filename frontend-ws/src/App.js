@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { Component } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,10 +13,16 @@ import Orders from './components/Orders'
 
 
 
-export default function App() {
+export default class App extends Component {
+constructor(props){
+  super(props)
+  this.state={
+    data: []
+  }
+}
 
   componentDidMount() {
-    fetch('http://localhost:3050')
+    fetch('http://localhost:3050/products')
       .then(resp => resp.json())
       .then(data => {
         console.log(data)
@@ -24,6 +30,7 @@ export default function App() {
       });
   }
 
+  render(){
   return (
     <Router>
       <div>
@@ -44,10 +51,10 @@ export default function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/products/:id">
-            <Products />
+          <Route path="/products">
+            <Products value={this.state.data}/>
           </Route>
-          <Route path="/orders/:id">
+          <Route path="/orders">
             <Orders />
           </Route>
           <Route path="/home/:id">
@@ -57,4 +64,5 @@ export default function App() {
       </div>
     </Router>
   );
+}
 }
