@@ -1,0 +1,21 @@
+.main{
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.title{
+    display: inline-block;
+    width: 200px;
+}
+
+.pages{
+    display: inline-block;
+    width: 300px;
+}
+
+li{
+    display: inline-block;
+    margin-right: 10px;
+}
