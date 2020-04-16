@@ -6,7 +6,8 @@ const cors = require('cors');
 const app = express();
 const port = 3050;
 
-app.use(cors())
+app.use(cors());
+app.use(express.static('public'));
 
 const productRepository = new ProductRepository();
 const productService = new ProductService(productRepository);
