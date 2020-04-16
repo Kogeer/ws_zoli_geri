@@ -10,6 +10,7 @@ import {
 import Home from './components/Home'
 import Products from './components/Products'
 import Orders from './components/Orders'
+import SingleProduct from "./components/SingleProd";
 
 
 
@@ -51,6 +52,9 @@ constructor(props){
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/products/:id" component={SingleProduct}>
+            
+          </Route>
           <Route path="/products">
             <Products data={this.state.data}/>
           </Route>
