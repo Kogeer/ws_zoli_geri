@@ -15,7 +15,7 @@ class ProductRepository {
                         return;
                     }
                     const everyProduct = products.map(product => {
-                        return new Product(product.name,product.shortSpecs,product.image,product.qty,product.url);
+                        return new Product(product.id,product.name,product.shortSpecs,product.image,product.qty,product.url);
                     })
 
                     resolve(everyProduct);
@@ -33,7 +33,7 @@ class ProductRepository {
                         reject(err);
                         return;
                     }
-                    const choosedProduct = new Product(product.name,product.shortSpecs,product.image,product.qty,product.url);
+                    const choosedProduct = new Product(product.id,product.name,product.shortSpecs,product.image,product.qty,product.url);
 
                     resolve(choosedProduct);
                 })
