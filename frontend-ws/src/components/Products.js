@@ -11,8 +11,10 @@ export default class Products extends Component {
     render() {
         const { data } = this.props
         return (
-            <div className="main">
+            <div className="Pmain">
+                <h1>Product Page</h1>
                 {data.map((elem, index) => {
+                    console.log('P-elem: ',elem)
                     return (
                         <div key={index} onClick={(e) => {this.openProduct(elem.id)}}>
                             <ProdBox elem={elem} />

@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import './App.css';
 
 import Home from './components/Home'
 import Products from './components/Products'
@@ -52,16 +53,14 @@ constructor(props){
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/products/:id" component={SingleProduct}>
-            
-          </Route>
+          <Route path="/products/:id" component={SingleProduct}></Route>
           <Route path="/products">
             <Products data={this.state.data}/>
           </Route>
           <Route path="/orders">
             <Orders />
           </Route>
-          <Route path="/home/:id">
+          <Route path="/home">
             <Home />
           </Route>
         </Switch>

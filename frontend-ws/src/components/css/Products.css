@@ -1,4 +1,6 @@
-.main{
+.Pmain{
     position: absolute;
+    width: 1200px;
+    background: lightsteelblue;
     margin-left: 50px;
 }

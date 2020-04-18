@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/ProductBox.css'
-import ProductBox from './ProductBox';
+import ProductDetail from './ProductDetail';
 
 export default class SingleProduct extends Component {
     constructor(props) {
@@ -18,14 +18,13 @@ export default class SingleProduct extends Component {
             .then(data => {
                 this.setState({ elem: data })
             });
-
     }
 
     render() {
         const { elem } = this.state
-        console.log(elem)
+        console.log('SP: ', elem)
         return (
-           <ProductBox elem={elem} />
+            <ProductDetail elem={elem} />
         )
     }
 

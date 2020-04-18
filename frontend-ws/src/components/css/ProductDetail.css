@@ -1,7 +1,6 @@
-.container{
+.PDcontainer{
     width: 250px;
     float: left;
-    background: lightgray;
     margin-left: 80px;
     padding: 5px;
     font-size: small;
